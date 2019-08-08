@@ -21,7 +21,7 @@ foreach ($events['events'] as $event) {
             case 'text':
                 // Reply message
                 $respMessage = 'Hello, your message is '. $event['message']['text'];
-
+            break;
             case 'image':
                 $messageID = $event['message']['id'];
                 $respMessage = 'Hello, your image ID is '. $messageID;
