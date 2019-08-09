@@ -104,7 +104,7 @@ if ($event['type'] == 'message') {
             $response = $bot->replyMessage($replyToken, $textMessageBuilder);
 
             */
-        }
+        //}
     }
 }
 echo 'OK';
