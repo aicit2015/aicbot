@@ -21,8 +21,8 @@ foreach ($events['events'] as $event) {
     $textMessageBuilder = new ImageMessageBuilder($originalContentUrl, $previewImageUrl);
     $response = $bot->replyMessage($replyToken, $textMessageBuilder);
 
+/*
 
-    
 if ($event['type'] == 'message') {
         // Get replyToken
         $replyToken = $event['replyToken'];
@@ -41,7 +41,7 @@ if ($event['type'] == 'message') {
         }
         
         
-        
+      */  
         
         
         
@@ -97,11 +97,13 @@ if ($event['type'] == 'message') {
             break;
             }
             */
-            
+            /*
             $httpClient = new CurlHTTPClient($channel_token);
             $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
             $textMessageBuilder = new TextMessageBuilder($respMessage);
             $response = $bot->replyMessage($replyToken, $textMessageBuilder);
+
+            */
         }
     }
 }
