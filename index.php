@@ -17,6 +17,11 @@ foreach ($events['events'] as $event) {
         // Get replyToken
         $replyToken = $event['replyToken'];
         switch($event['message']['type']) {
+            case 'location':
+            $address = $event['message']['address'];
+            //            Reply message
+            $respMessage = 'Hello, your address is '. $address;
+            break;
             case 'audio':
             $messageID = $event['message']['id'];
             //            Create audio file on server.
