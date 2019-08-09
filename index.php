@@ -12,7 +12,7 @@ use \GeniusTS\PrayerTimes\Coordinates;
     //$prayer = new Prayer(new Coordinates($longitude, $latitude));
     // Or
     $prayer = new Prayer();
-    $prayer->setCoordinates($longitude, $latitude);
+    $prayer->setCoordinates(6.994023,100.4786648);
 
     // Return an \GeniusTS\PrayerTimes\Times instance
     $times = $prayer->times('2017-5-9');
