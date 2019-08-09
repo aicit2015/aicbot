@@ -18,6 +18,11 @@ use \GeniusTS\PrayerTimes\Coordinates;
     $times = $prayer->times('2017-5-9');
     $times->setTimeZone(+3);
     echo $times->fajr->format('h:i a');
+    echo $times->sunrise->format('h:i a');
+    echo $times->duhr->format('h:i a');
+    echo $times->asr->format('h:i a');
+    echo $times->maghrib->format('h:i a');
+    echo $times->isha->format('h:i a');
 
 
 $channel_token ='DYKKHgUhUFUOGn1tPbP1UGEJFV/Ww+MsAJ8liQVFG5RkZ6D/EryVeymFXbDpn+zciZiMIJ3mx0lAltZjwKX3mDu50NVNb5itvd7pP8w+pXzWogTAjgUVC1BiO8ibanzREjPMJ/GJZK14yTclSGs8/QdB04t89/1O/w1cDnyilFU=';
