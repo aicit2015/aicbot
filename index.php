@@ -17,7 +17,11 @@ foreach ($events['events'] as $event) {
         // Get replyToken
         $replyToken = $event['replyToken'];
         switch($event['message']['type']) {
-            
+            case 'sticker':
+            $messageID = $event['message']['packageId'];
+            //Reply message
+            $respMessage = 'Hello, your Sticker Package ID is '. $messageID;
+            break;
             case 'text':
                 // Reply message
                 $respMessage = 'Hello, your message is '. $event['message']['text'];
@@ -27,7 +31,7 @@ foreach ($events['events'] as $event) {
                 $respMessage = 'Hello, your image ID is '. $messageID;
             break;
             default:
-                $respMessage = 'Please send test or image only';
+                $respMessage = 'Please send text or image or Sticker';
             break;
             }
             $httpClient = new CurlHTTPClient($channel_token);
