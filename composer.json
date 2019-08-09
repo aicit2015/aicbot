@@ -1,5 +1,6 @@
 {
     "require": {
-        "linecorp/line-bot-sdk": "^3.13"
+        "linecorp/line-bot-sdk": "^3.13",
+        "geniusts/prayer-times": "^1.0"
     }
 }

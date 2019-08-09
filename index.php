@@ -5,6 +5,19 @@ use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 use \LINE\LINEBot\MessageBuilder\ImageMessageBuilder;
+use \GeniusTS\PrayerTimes\Prayer;
+use \GeniusTS\PrayerTimes\Coordinates;
+
+
+    //$prayer = new Prayer(new Coordinates($longitude, $latitude));
+    // Or
+    $prayer = new Prayer();
+    $prayer->setCoordinates($longitude, $latitude);
+
+    // Return an \GeniusTS\PrayerTimes\Times instance
+    $times = $prayer->times('2017-5-9');
+    $times->setTimeZone(+3);
+    echo $times->fajr->format('h:i a');
 
 
 $channel_token ='DYKKHgUhUFUOGn1tPbP1UGEJFV/Ww+MsAJ8liQVFG5RkZ6D/EryVeymFXbDpn+zciZiMIJ3mx0lAltZjwKX3mDu50NVNb5itvd7pP8w+pXzWogTAjgUVC1BiO8ibanzREjPMJ/GJZK14yTclSGs8/QdB04t89/1O/w1cDnyilFU=';
@@ -24,6 +37,17 @@ foreach ($events['events'] as $event) {
     $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
     $textMessageBuilder = new ImageMessageBuilder($originalContentUrl, $previewImageUrl);
     $response = $bot->replyMessage($replyToken, $textMessageBuilder);
+
+    //$prayer = new Prayer(new Coordinates($longitude, $latitude));
+    // Or
+    $prayer = new Prayer();
+    $prayer->setCoordinates($longitude, $latitude);
+
+    // Return an \GeniusTS\PrayerTimes\Times instance
+    $times = $prayer->times('2017-5-9');
+    $times->setTimeZone(+3);
+    //echo $times->fajr->format('h:i a');
+
 
 /*
 

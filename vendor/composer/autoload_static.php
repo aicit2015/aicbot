@@ -6,17 +6,61 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitbe72b397722ef591ece6b25cb072303c
 {
+    public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Contracts\\Translation\\' => 30,
+            'Symfony\\Component\\Translation\\' => 30,
+        ),
         'L' => 
         array (
             'LINE\\' => 5,
         ),
+        'G' => 
+        array (
+            'GeniusTS\\PrayerTimes\\' => 21,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Contracts\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation-contracts',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
         'LINE\\' => 
         array (
             0 => __DIR__ . '/..' . '/linecorp/line-bot-sdk/src',
+        ),
+        'GeniusTS\\PrayerTimes\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geniusts/prayer-times/src',
+        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
+    );
+
+    public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'UpdateHelper\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/kylekatarnls/update-helper/src',
+            ),
         ),
     );
 
@@ -25,6 +69,8 @@ class ComposerStaticInitbe72b397722ef591ece6b25cb072303c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitbe72b397722ef591ece6b25cb072303c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitbe72b397722ef591ece6b25cb072303c::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitbe72b397722ef591ece6b25cb072303c::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitbe72b397722ef591ece6b25cb072303c::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
