@@ -38,7 +38,8 @@ foreach ($events['events'] as $event) {
         
         
         
-        
+        //---------------------------`[บ้านๆ ]
+        /*
         
         switch($event['message']['type']) {
             case 'location':
@@ -85,6 +86,7 @@ foreach ($events['events'] as $event) {
                 $respMessage = 'Please send text or image or Sticker';
             break;
             }
+            */
             
             $httpClient = new CurlHTTPClient($channel_token);
             $bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
