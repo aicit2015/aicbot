@@ -16,7 +16,7 @@ use \GeniusTS\PrayerTimes\Coordinates;
 
     // Return an \GeniusTS\PrayerTimes\Times instance
     $times = $prayer->times('2019-8-9');
-    $times->setTimeZone(+3);
+    $times->setTimeZone(+7);
     echo $times->fajr->format('h:i a');
     echo $times->sunrise->format('h:i a');
     echo $times->duhr->format('h:i a');
