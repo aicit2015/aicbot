@@ -4,6 +4,9 @@ require_once('./vendor/autoload.php');
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
+use \LINE\LINEBot\MessageBuilder\ImageMessageBuilder;
+
+
 $channel_token ='DYKKHgUhUFUOGn1tPbP1UGEJFV/Ww+MsAJ8liQVFG5RkZ6D/EryVeymFXbDpn+zciZiMIJ3mx0lAltZjwKX3mDu50NVNb5itvd7pP8w+pXzWogTAjgUVC1BiO8ibanzREjPMJ/GJZK14yTclSGs8/QdB04t89/1O/w1cDnyilFU=';
 $channel_secret = 'c0236b5dc114d1e52688890efdd16b93';
 //Get message from Line API
